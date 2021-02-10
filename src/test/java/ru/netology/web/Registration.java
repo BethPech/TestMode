@@ -8,9 +8,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Registration {
-    private String login = "vasya";
-    private String password = "password";
-    private String status = "active";
-
+    private String login;
+    private String password;
+    private String status;
 
 }
+
+

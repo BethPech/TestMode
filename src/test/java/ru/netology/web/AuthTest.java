@@ -22,8 +22,8 @@ public class AuthTest {
     @Test
     void shouldSubmitRequestIfUserIsActive() {
         Registration user = DataGenerator.generateNewActiveUser();
-        $(cssSelector("[name=login]")).sendKeys(user.getLogin());
-        $(cssSelector("[name=password]")).sendKeys(user.getPassword());
+        $(cssSelector("[name=login]")).setValue(user.getLogin());
+        $(cssSelector("[name=password]")).setValue(user.getPassword());
         $(cssSelector("[type=button]")).click();
         $(byText("Личный кабинет")).shouldBe(visible, Duration.ofSeconds(15));
     }
